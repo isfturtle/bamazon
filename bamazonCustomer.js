@@ -47,7 +47,7 @@ function purchaseItems(queryResults){
 					console.log(newStock);
 					 connection.query("UPDATE products SET ? WHERE ?", [{stock_quantity: newStock}, {item_id: queryResults[response.id].item_id}], function(err, resp){
 					 	if(err){conosle.log(err);}
-					 	else{console.log("database updated")}
+					 	//else{console.log("database updated")}
 					 });
 					console.log("You have purchased "+response.quantity +" units of " +queryResults[response.id].product_name +" at a cost of $"+cost);
 					console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
